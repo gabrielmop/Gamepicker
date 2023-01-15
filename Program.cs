@@ -1,8 +1,24 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Threading;
 
 namespace Geradoraleatorio
 {
+    class GFG : IComparer<int>
+    {
+        public int Compare(int x, int y)
+        {
+            if (x == 0 || y == 0)
+            {
+                return 0;
+            }
+
+          
+            return x.CompareTo(y);
+
+        }
+    }
+
     internal class Program
     {
         static void Main(string[] args)
@@ -11,8 +27,8 @@ namespace Geradoraleatorio
             int numeros;
             Random num1 = new Random();
             int resposta;
-
-
+            GFG Comparador = new GFG();
+            
 
             do
             {
@@ -23,6 +39,8 @@ namespace Geradoraleatorio
                 Console.WriteLine("Digite Quantos números você quer que sejam gerados:");
                 int.TryParse(Console.ReadLine(), out numeros);
 
+                List<int> lista = new List<int>(numeros);
+                
                 Console.Clear();
                 do
                 {
@@ -30,11 +48,19 @@ namespace Geradoraleatorio
                     {
                         int resultado = num1.Next(1, nummaximo);
 
-                        
-                        Console.WriteLine($"O Número gerado foi: {resultado}");
+                      
+                        lista.Add(resultado);
+                    }
+                    lista.Sort(Comparador);
+                    for (int i = 0; i < numeros; i++)
+                    {
+
+                        Console.WriteLine($"O numero gerado foi {lista[i]}");
+
+
 
                     }
-                   
+
                     Console.WriteLine("\r\n \r\nDigite 1 para Gerar outro número ou 2 pra redefinir parametros");
                    resposta = int.Parse(Console.ReadLine());
                     Console.Clear();
