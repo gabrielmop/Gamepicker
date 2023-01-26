@@ -44,6 +44,7 @@ namespace Geradoraleatorio
                 Console.Clear();
                 do
                 {
+                    lista.Clear();
                     for (int i = 0; i < numeros; i++)
                     {
                         int resultado = num1.Next(1, nummaximo);
