@@ -38,7 +38,7 @@ namespace Geradoraleatorio
 
             do
             {
-                Console.WriteLine("Bem Vindo ao gerador de numero aleatorio");
+                Console.WriteLine("Bem Vindo ao Gerador de sugestão de Jogos aleatorio");
                 Console.WriteLine("Digite o numero minimo que você deseja:");
                 int.TryParse(Console.ReadLine(), out numminimo);
                 Console.WriteLine("Digite Quantos números você quer que sejam gerados:");
