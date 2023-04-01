@@ -24,7 +24,7 @@ namespace Gamepicker
 
             do
             {
-                Console.WriteLine("Bem Vindo ao Gerador de sugestão de Jogos aleatorio");
+                Console.WriteLine("Bem Vindo ao GamePicker");
                 Console.WriteLine("Digite o numero minimo que você deseja:");
                 int.TryParse(Console.ReadLine(), out numminimo);
                 Console.WriteLine("Digite Quantos números você quer que sejam gerados:");
