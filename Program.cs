@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Threading;
 using System.Windows.Forms;
 using static System.Windows.Forms.LinkLabel;
@@ -62,7 +63,17 @@ namespace Geradoraleatorio
 
                             while ((line = sr.ReadLine()) != null)
                             {
+                               
                                 lista.Add(line);
+                                if (line.StartsWith("--"))
+                                {
+                                    lista.Remove(line);
+                                    break;
+                                }
+                                if (line.EndsWith("//"))
+                                {
+                                    lista.Remove(line);
+                                }
                             }
                         }
 
