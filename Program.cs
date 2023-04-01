@@ -6,22 +6,8 @@ using System.Threading;
 using System.Windows.Forms;
 using static System.Windows.Forms.LinkLabel;
 
-namespace Geradoraleatorio
+namespace Gamepicker
 {
-    class GFG : IComparer<int>
-    {
-        public int Compare(int x, int y)
-        {
-            if (x == 0 || y == 0)
-            {
-                return 0;
-            }
-
-
-            return x.CompareTo(y);
-
-        }
-    }
 
 
     internal class Program
@@ -33,7 +19,6 @@ namespace Geradoraleatorio
             int numeros;
             Random num1 = new Random();
             int resposta;
-            GFG Comparador = new GFG();
             List<string> lista = new List<string>();
 
 
