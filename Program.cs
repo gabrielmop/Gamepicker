@@ -14,7 +14,6 @@ namespace Gamepicker
     {
         static void Main(string[] args)
         {
-            int numminimo;
             int nummaximo;
             int numeros;
             Random num1 = new Random();
@@ -25,8 +24,6 @@ namespace Gamepicker
             do
             {
                 Console.WriteLine("Bem Vindo ao GamePicker");
-                Console.WriteLine("Digite o numero minimo que você deseja:");
-                int.TryParse(Console.ReadLine(), out numminimo);
                 Console.WriteLine("Digite Quantos números você quer que sejam gerados:");
                 int.TryParse(Console.ReadLine(), out numeros);
                 Console.WriteLine("Agora escolha um arquivo para basear a lista");
@@ -71,15 +68,11 @@ namespace Gamepicker
                 nummaximo = lista.Count;
                 Console.Clear();
                 do
-                {                   
+                {
                     for (int i = 0; i < numeros; i++)
                     {
-                        int numero = num1.Next(1, nummaximo);
-                        Console.WriteLine($"O Jogo escolhido foi {lista[numero]}");
+                        int numero = num1.Next(0, nummaximo);
                     }
-                    
-
-                 
 
                     Console.WriteLine("\r\n \r\nDigite 1 para Gerar outro número ou 2 pra redefinir parametros");
                     resposta = int.Parse(Console.ReadLine());
