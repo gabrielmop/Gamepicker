@@ -24,6 +24,7 @@ namespace Gamepicker
 
             do
             {
+                lista.Clear();
                 Console.WriteLine("Bem Vindo ao GamePicker");
                 Console.WriteLine("Esse app gera uma sugestão de jogo aleatoriamente baseado em uma lista que voce escolher");
                 Console.WriteLine("Digite Quantos números você quer que sejam gerados:");
