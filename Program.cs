@@ -55,8 +55,9 @@ namespace Gamepicker
                                     lista.Remove(line);
                                     break;
                                 }
-                                if (line.EndsWith("//"))
+                                if (line.Contains("//"))
                                 {
+                                   
                                     lista.Remove(line);
                                     Removidos++;
                                 }
