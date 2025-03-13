@@ -19,11 +19,12 @@ namespace Gamepicker
             Random num1 = new Random();
             int resposta;
             List<string> lista = new List<string>();
-            int Removidos = 1;
+            
 
 
             do
             {
+                int Removidos = 1;
                 lista.Clear();
                 Console.WriteLine("Bem Vindo ao GamePicker");
                 Console.WriteLine("Esse app gera uma sugestão de jogo aleatoriamente baseado em uma lista que voce escolher");
